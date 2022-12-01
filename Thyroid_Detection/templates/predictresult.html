@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="shortcut icon" type="image/jpg" href="static/images/banner_1.png" />
+    <link rel="stylesheet" type="text/css" href="static/css/predictresult.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <style>
+        body {
+          background-image: url("static/images/IMAGES12.png");
+        }
+        </style>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid ">
+                
+              <a class="img" href="#"><img src="static\images\logo1.png" style="width:120px; margin:0 auto;"> </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">about</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      More Detection
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Cancer Detection</a>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Tumour Detection</a></li>
+                      <li><a class="dropdown-item" href="#">Infection Detection</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Coming soon</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled"><h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ANALYZED RESULT DOWN BELOW</h6></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+   
+<br><br><br><br>
+    <section class="result"></section>
+    {% if output is defined and output|length %}
+    <div class="col-md-12 text-center">
+        <h2>{{ output }}</h2>
+    </div>
+    <br>
+    {% else %}
+    <br>
+    {% endif %}
+    </section>
+
+    <section id="footer">
+        <div class="social-links">
+            
+            <p>&copy; Copyright 2022 MCA MINOR PROJECT</p>
+
+        </div>
+    </section>
+</body>
+
+</html>
